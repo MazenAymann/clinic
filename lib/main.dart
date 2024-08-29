@@ -1,5 +1,5 @@
 import 'package:clinic/config/routes/routes.dart';
-import 'package:clinic/core/onboarding/screens/onboarding.dart';
+import 'package:clinic/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -15,16 +15,14 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, child) {
-        return MaterialApp(
+        return MaterialApp.router(
           debugShowCheckedModeBanner: false,
-          routes: Routes.getRoutes(),
-          home: child,
+          routerConfig: router,
+          theme: ThemeData(
+            scaffoldBackgroundColor: appBackgroundColor,
+          ),
         );
       },
-      child: const Scaffold(
-        backgroundColor: Colors.white,
-        body: OnBoardingPage(),
-      ),
     );
   }
 }
