@@ -1,5 +1,7 @@
+import 'package:clinic/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../models/onboarding_pages_model.dart';
 
@@ -61,8 +63,8 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
               child: Text(
                 description,
                 maxLines: 5,
-                style: TextStyle(
-                  color: Colors.grey[600],
+                style: GoogleFonts.cairo(
+                  color: onBoardingTextColor,
                   fontSize: 25.h,
                   height: 1.2,
                   wordSpacing: 1.5,

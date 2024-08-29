@@ -1,4 +1,6 @@
+import 'package:clinic/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AppBarOnBoarding extends StatefulWidget {
   const AppBarOnBoarding({
@@ -26,10 +28,10 @@ class _AppBarOnBoardingState extends State<AppBarOnBoarding> {
             onPressed: widget.onSkip,
             child: Text(
               "SKIP",
-              style: const TextStyle(
+              style: GoogleFonts.cairo(
                 fontWeight: FontWeight.w600,
                 fontSize: 16,
-                color: Colors.grey,
+                color: onBoardingSkipColor,
               ),
             ),
           ),
