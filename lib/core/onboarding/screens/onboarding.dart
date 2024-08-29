@@ -7,7 +7,7 @@ import 'components/on_boarding_scaffold.dart';
 class OnBoardingPage extends StatefulWidget {
   const OnBoardingPage({super.key});
 
-  static const routeName = '/onBoarding';
+  static const routeName = '/';
 
   @override
   State<OnBoardingPage> createState() => _OnBoardingState();
@@ -17,7 +17,6 @@ class _OnBoardingState extends State<OnBoardingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: BlocProvider(
         create: (_) => OnBoardingBloc(),
         child: const OnBoardingScaffoldBody(),

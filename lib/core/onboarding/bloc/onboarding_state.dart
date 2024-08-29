@@ -7,7 +7,7 @@ abstract class OnBoardingState extends Equatable {
 class OnNewPagePushed extends OnBoardingState {
   const OnNewPagePushed({
     required this.progressPercentage,
-    this.indicatorColor = Colors.blueAccent,
+    this.indicatorColor = onBoardingIndicatorColor,
   });
 
   final double progressPercentage;
