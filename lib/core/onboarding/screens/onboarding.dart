@@ -7,7 +7,7 @@ import 'components/on_boarding_scaffold.dart';
 class OnBoardingPage extends StatefulWidget {
   const OnBoardingPage({super.key});
 
-  static const routeName = 'onBoarding';
+  static const routeName = '/onBoarding';
 
   @override
   State<OnBoardingPage> createState() => _OnBoardingState();

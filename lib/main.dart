@@ -1,3 +1,4 @@
+import 'package:clinic/config/routes/routes.dart';
 import 'package:clinic/core/onboarding/screens/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       builder: (_, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
+          routes: Routes.getRoutes(),
           home: child,
         );
       },

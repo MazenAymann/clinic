@@ -1,3 +1,4 @@
+import 'package:clinic/core/auth/login/presentation/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -76,7 +77,8 @@ class _OnBoardingScaffoldState extends State<OnBoardingScaffoldBody> {
   }
 
   void preventOnBoardingShowAgain(BuildContext context) {
+    // TODO: implement preventOnBoardingShowAgain by saving on shared preferences isRunBefore
     // context.read<AuthenticationRepository>().onBoardingDone();
-    // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Login()));
+    Navigator.pushReplacementNamed(context, LoginScreen.routeName);
   }
 }
