@@ -25,6 +25,7 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Flexible(
                   flex: 85,
@@ -34,7 +35,6 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
                   ),
                 ),
                 _displayText(
-                  title: widget.pages[index].title,
                   description: widget.pages[index].description,
                 ),
               ],
@@ -46,7 +46,6 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
   }
 
   Expanded _displayText({
-    required String title,
     required String description,
   }) {
     return Expanded(
@@ -54,38 +53,27 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
       child: Column(
         children: [
           SizedBox(
-            height: 10.h,
-          ),
-          Text(
-            title,
-            maxLines: 2,
-            style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.w700,
-              fontSize: 22.h,
-              height: 1.2,
-            ),
-            textAlign: TextAlign.center,
-          ),
-          const SizedBox(
-            height: 10,
+            height: 30.h,
           ),
           Expanded(
-            child: Text(
-              description,
-              maxLines: 5,
-              style: TextStyle(
-                color: Colors.grey[600],
-                fontSize: 15.h,
-                height: 1.2,
-                wordSpacing: 1.7,
+            child: SizedBox(
+              width: 270.w,
+              child: Text(
+                description,
+                maxLines: 5,
+                style: TextStyle(
+                  color: Colors.grey[600],
+                  fontSize: 25.h,
+                  height: 1.2,
+                  wordSpacing: 1.5,
+                ),
+                overflow: TextOverflow.fade,
+                textAlign: TextAlign.center,
               ),
-              overflow: TextOverflow.fade,
-              textAlign: TextAlign.center,
             ),
           ),
-          const SizedBox(
-            height: 5,
+          SizedBox(
+            height: 5.h,
           ),
         ],
       ),

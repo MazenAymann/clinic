@@ -1,39 +1,26 @@
+import '../../../constants/assets_path.dart' as images;
+
 class OnBoardingModel {
   final String imagePath;
-  final String title;
   final String description;
 
   OnBoardingModel({
     required this.imagePath,
-    required this.title,
     required this.description,
   });
 
   static List<OnBoardingModel> list = [
     OnBoardingModel(
-      imagePath: 'assets/images/splash.gif',
-      title: "Title",
-      description: "Description",
+      imagePath: images.onBoardingImageOne,
+      description: "Book Your Nearest Hospitals Doctor On Your Time",
     ),
     OnBoardingModel(
-      imagePath: 'assets/images/splash.gif',
-      title: "Title",
-      description: "Description",
+      imagePath: images.onBoardingImageTwo,
+      description: "Take A Token Of Your Preferred Doctor ",
     ),
     OnBoardingModel(
-      imagePath: 'assets/images/splash.gif',
-      title: "Title",
-      description: "Description",
-    ),
-    OnBoardingModel(
-      imagePath: 'assets/images/splash.gif',
-      title: "Title",
-      description: "Description",
-    ),
-    OnBoardingModel(
-      imagePath: 'assets/images/splash.gif',
-      title: "Title",
-      description: "Description",
+      imagePath: images.onBoardingImageThree,
+      description: "Manage Your Valuable Time",
     ),
   ];
 }
