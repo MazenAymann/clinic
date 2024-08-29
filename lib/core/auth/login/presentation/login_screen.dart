@@ -2,9 +2,11 @@ import 'dart:async';
 
 import 'package:clinic/constants/assets_path.dart';
 import 'package:clinic/constants/colors.dart';
+import 'package:clinic/core/auth/register/presentation/register_screen.dart';
 import 'package:clinic/utils/ui/text_form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rounded_loading_button_plus/rounded_loading_button.dart';
 
@@ -98,7 +100,7 @@ class LoginScreen extends StatelessWidget {
                   height: 30.h,
                 ),
                 RoundedLoadingButton(
-                  width: 80.w,
+                  width: 120.w,
                   borderRadius: 10,
                   color: signInTextColor,
                   controller: btnController,
@@ -163,14 +165,14 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      width: 2.w,
+                      width: 5.w,
                     ),
                     TextButton(
                       style: TextButton.styleFrom(
                         padding: EdgeInsets.zero,
                       ),
                       onPressed: () {
-                        //TODO: Implement Navigation to Register
+                        context.go(RegisterScreen.routeName);
                       },
                       child: Text(
                         'Register',
