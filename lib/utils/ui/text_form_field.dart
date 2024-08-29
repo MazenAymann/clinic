@@ -10,10 +10,12 @@ class CustomTextFromField extends StatefulWidget {
     required this.labelText,
     required this.textInputType,
     required this.isPassword,
+    required this.textInputAction,
   });
 
   final String labelText;
   final TextInputType textInputType;
+  final TextInputAction textInputAction;
   final bool isPassword;
   @override
   State<CustomTextFromField> createState() => _CustomTextFromFieldState();
@@ -33,6 +35,7 @@ class _CustomTextFromFieldState extends State<CustomTextFromField> {
     return TextFormField(
       obscureText: _obscureText,
       cursorColor: signInTextColor,
+      textInputAction: widget.textInputAction,
       decoration: InputDecoration(
         labelText: widget.labelText,
         labelStyle: GoogleFonts.cairo(color: signInTextColor),

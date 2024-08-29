@@ -21,6 +21,11 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             scaffoldBackgroundColor: appBackgroundColor,
           ),
+          builder: (context, routerChild) {
+            return SafeArea(
+              child: routerChild ?? Container(),
+            );
+          },
         );
       },
     );

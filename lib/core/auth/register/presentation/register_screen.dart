@@ -20,22 +20,26 @@ class RegisterScreen extends StatelessWidget {
     final RoundedLoadingButtonController btnController =
         RoundedLoadingButtonController();
 
-    void doSomething() async {
-      //TODO: Implement Sign In
+    void onSignUp() async {
+      //TODO: Implement Sign Up
       Timer(const Duration(seconds: 3), () {
         btnController.success();
+        context.go(LoginScreen.routeName);
       });
     }
 
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.only(left: 20.w, right: 20.w, top: 100.h),
+        padding: EdgeInsets.symmetric(horizontal: 20.w),
         child: SizedBox(
           width: double.infinity,
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                SizedBox(
+                  height: 100.h,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -71,6 +75,7 @@ class RegisterScreen extends StatelessWidget {
                 const CustomTextFromField(
                   labelText: "Create Username",
                   textInputType: TextInputType.text,
+                  textInputAction: TextInputAction.next,
                   isPassword: false,
                 ),
                 SizedBox(
@@ -79,6 +84,7 @@ class RegisterScreen extends StatelessWidget {
                 const CustomTextFromField(
                   labelText: "Enter Email",
                   textInputType: TextInputType.emailAddress,
+                  textInputAction: TextInputAction.next,
                   isPassword: false,
                 ),
                 SizedBox(
@@ -87,6 +93,7 @@ class RegisterScreen extends StatelessWidget {
                 const CustomTextFromField(
                   labelText: "Create Password",
                   textInputType: TextInputType.text,
+                  textInputAction: TextInputAction.next,
                   isPassword: true,
                 ),
                 SizedBox(
@@ -95,6 +102,7 @@ class RegisterScreen extends StatelessWidget {
                 const CustomTextFromField(
                   labelText: "Re-Enter Password",
                   textInputType: TextInputType.text,
+                  textInputAction: TextInputAction.done,
                   isPassword: true,
                 ),
                 SizedBox(
@@ -105,7 +113,7 @@ class RegisterScreen extends StatelessWidget {
                   borderRadius: 10,
                   color: signInTextColor,
                   controller: btnController,
-                  onPressed: doSomething,
+                  onPressed: onSignUp,
                   successColor: Colors.green,
                   errorColor: Colors.red,
                   child: Text(
@@ -147,7 +155,11 @@ class RegisterScreen extends StatelessWidget {
                   height: 25.h,
                 ),
                 InkWell(
-                  child: Image.asset(googleImage),
+                  child: Image.asset(
+                    googleImage,
+                    height: 30.h,
+                    width: 30.w,
+                  ),
                   onTap: () {
                     //TODO: Implement Login with Google
                   },
