@@ -1,4 +1,5 @@
 import 'package:clinic/core/auth/login/presentation/login_screen.dart';
+import 'package:clinic/core/auth/otp/presentation/otp_screen.dart';
 import 'package:clinic/core/auth/register/presentation/register_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -30,6 +31,12 @@ final GoRouter router = GoRouter(
       path: RegisterScreen.routeName,
       builder: (BuildContext context, GoRouterState state) {
         return const RegisterScreen();
+      },
+    ),
+    GoRoute(
+      path: OtpScreen.routeName,
+      builder: (BuildContext context, GoRouterState state) {
+        return const OtpScreen();
       },
     ),
   ],

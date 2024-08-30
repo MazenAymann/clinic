@@ -6,3 +6,6 @@ const String onBoardingImageThree = 'assets/images/onboarding_page_three.png';
 
 //Sign In Page
 const String googleImage = 'assets/images/google_photo.png';
+
+//OTP Page
+const String otpImage = 'assets/images/otp_image.png';
