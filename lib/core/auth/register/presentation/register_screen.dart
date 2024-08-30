@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:clinic/constants/assets_path.dart';
 import 'package:clinic/constants/colors.dart';
 import 'package:clinic/core/auth/login/presentation/login_screen.dart';
+import 'package:clinic/core/auth/otp/presentation/otp_screen.dart';
 import 'package:clinic/utils/ui/text_form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -24,7 +25,7 @@ class RegisterScreen extends StatelessWidget {
       //TODO: Implement Sign Up
       Timer(const Duration(seconds: 3), () {
         btnController.success();
-        context.go(LoginScreen.routeName);
+        context.go(OtpScreen.routeName);
       });
     }
 
@@ -38,7 +39,7 @@ class RegisterScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  height: 100.h,
+                  height: 70.h,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -173,7 +174,7 @@ class RegisterScreen extends StatelessWidget {
                     Text(
                       'already have an account?',
                       style: GoogleFonts.cairo(
-                        fontSize: 14.w,
+                        fontSize: 13.w,
                         color: Colors.black,
                       ),
                     ),
@@ -187,9 +188,9 @@ class RegisterScreen extends StatelessWidget {
                       child: Text(
                         'Login',
                         style: GoogleFonts.cairo(
-                          fontSize: 15.w,
+                          fontSize: 13.w,
                           color: registerTextColor,
-                          fontWeight: FontWeight.w700,
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
                     ),

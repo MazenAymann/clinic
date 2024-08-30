@@ -38,7 +38,7 @@ class LoginScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  height: 100.h,
+                  height: 70.h,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -170,7 +170,7 @@ class LoginScreen extends StatelessWidget {
                     Text(
                       'don\'t have an account?',
                       style: GoogleFonts.cairo(
-                        fontSize: 14.w,
+                        fontSize: 13.w,
                         color: Colors.black,
                       ),
                     ),
@@ -187,9 +187,9 @@ class LoginScreen extends StatelessWidget {
                       child: Text(
                         'Register',
                         style: GoogleFonts.cairo(
-                          fontSize: 15.w,
+                          fontSize: 13.w,
                           color: registerTextColor,
-                          fontWeight: FontWeight.w700,
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
                     ),
